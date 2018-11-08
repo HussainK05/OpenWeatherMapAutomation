@@ -1,0 +1,13 @@
+#@Scenario2
+#Scenario: Search weather information with invalid city name
+#Given web browser is on the homepage of openweathermap website
+#When user enter invalid city name
+#And search for the weather information
+#Then website display result not found
+
+#@Scenario3
+#Scenario: Search weather information with valid city name
+#Given web browser is on the homepage of openweathermap website
+#When user enter valid city name
+#And search for the weather information
+#Then website display weather information of the valid searched city
