@@ -1,5 +1,5 @@
-@End2End @ImpInfoHomepage
-Feature: E2E automated scenarios for validating important information on homepage
+@End2End @Chrome @ImpInfoHomepage
+Feature: E2E automated scenarios for validating important information on homepage in chrome browser
 As an automation tester
 I want to verify all important information on the homepage
 So that we can confirm testing of hompage
@@ -60,25 +60,66 @@ Then it should display current day weather and forecast details
 @Scenario4
 Scenario: Validate "More weather in your city" button
 When user clicks on "More weather in your city" button
-Then "Weather Forecast" page should be displayed
+Then "Weather forecast" page should be displayed
 
 @Scenario5
 Scenario: Verify "Sentinel-2 via Openweather API" section
 When user clicks on "Image" in this section
 Then "How to start" page of "Agro API" website should be displayed in the new tab
-And user clicks on  "www.agromonitoring.com" link
+And user clicks on  "www.agromonitoring.com" website link
 Then homepage of "Agro API" website should be displayed in the new tab
-And user clicks on "blog" link
+And user clicks on "blog" link via Openweather API section
 Then "Blog" page should be displayed of "OpenWeather" in the new tab of the browser
-And user clicks on "How to start" button
+And user clicks on "How to start" button via Openweather API section
 Then "How to start" page of "Agro API" website should be displayed in the new tab
 
 @Scenario6
 Scenario: Verify "APIs for Agriculture on agromonitoring.com" section
-When user clicks on "Image" in this section
+When user clicks on "Image" in API for agriculture section
 Then homepage of "Agro API" website should be displayed in the new tab
-And user clicks on "Move to agromonitoring.com"
+And user clicks on "Move to agromonitoring.com" link in API for agriculture section
 Then homepage of "Agro API" website should be displayed in the new tab
+
+@Scenario7
+Scenario: Verify all sections in the footer
+When user clicks on Find your city link
+Then Weather in your city page should be displayed
+And user clicks on Weather maps
+Then interactive maps page should be displayed
+And user clicks on How to start link
+Then How to start page should be displayed
+And user clicks on Weather APIs for developers
+Then Weather APIs page should be displayed
+And user clicks on Current weather link
+Then Current weather data page should be displayed
+And user clicks on 5 day/3 hour weather forecast
+Then 5 day weather forecast page should be displayed
+And user clicks on 16 day/ daily weather forecase
+Then 16 day weather forecast page should be displayed
+And user clicks on Hourly historical data link
+Then Historical data page should be displayed
+And user clicks on History bulk link
+Then History bulk page should be displayed
+And user cliks on Examples of API use
+Then Partner and solutions page should be displayed
+And user clicks on Example of weather map layers link
+Then Example of weather map layers page should be displayed
+And user clicks on Map styles legend
+Then Map style legends page should be displayed
+And user clicks on Libraries to connect weather layers
+Then Libraries to connect weather layers page should be displayed
+And user clicks on Price-list link
+Then Price list page should be displayed
+And user clicks on Subscribe to APIs link
+Then Subscription page should be displayed
+And user clicks on How to connect your weather station
+Then Weather stations page should be displayed
+And user clicks on About company link
+Then About company page should be displayed
+And user clicks on Team link
+Then Team page should be displayed
+And user clicks on Weather model link
+Then Weather model page should be displayed
 
 
 

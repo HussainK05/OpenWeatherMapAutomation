@@ -7,15 +7,15 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/test/resources/E2EFunctionalTest",
+		features="src/test/resources/E2EFeatureChrome",
 		glue= {"stepDefinitions"},
 		plugin= {"pretty","html:target/site/cucumber-html-reports","json:target/cucumber.json", "junit:target/cucumber.xml"},
 		monochrome=true,
 		dryRun=false,
-		tags= {"@Scenario1"}
+		tags= {"@Chrome"}
 		)
 
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class TestRunnerChrome extends AbstractTestNGCucumberTests {
 
 	
 }

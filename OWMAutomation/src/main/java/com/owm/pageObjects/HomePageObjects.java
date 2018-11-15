@@ -72,178 +72,163 @@ public class HomePageObjects {
 	@FindBy(xpath="//div[@class='jumbotron first']")
 	WebElement mainSlideShow;
 	
-	@FindBy(id="q")
-	WebElement searchTextbox;
+	@FindBy(xpath="//*[@placeholder='Your city name']")
+	public WebElement searchTextbox;
 	
-	@FindBy(xpath="//form[@id='searchform']//button[@type='button']")
-	WebElement searchBtn;
+	@FindBy(xpath="//*[@id='searchform']/button")
+	public WebElement searchBtn;
 	
 	@FindBy(xpath="//form[@id='searchform']//button[@type='submit']")
-	WebElement currentlocBtn;
+	public WebElement currentlocBtn;
 	
-	@FindBy(id="weather-widget")
-	WebElement weatherwidgetLink;
+	@FindBy(id="//h2[@class='weather-widget__city-name']")
+	public WebElement weatherwidgetLink;
 	
 	@FindBy(className="widget__title")
-	WebElement widgettileLink;
+	public WebElement widgettileLink;
 	
 	@FindBy(className="widget__graphic")
-	WebElement widgetgraphicLink;
+	public WebElement widgetgraphicLink;
+	
+	@FindBy(linkText="Main")
+	public WebElement widgetsMainLink;
+	
+	@FindBy(linkText="Hourly")
+	public WebElement widgetsHourlyLink;
+	
+	@FindBy(partialLinkText="Chart")
+	public WebElement widgetsChartLink;
+	
+	@FindBy(id="tab-map")
+	public WebElement widgetsMapLink;
+	
+	@FindBy(className="weather-forecast-graphic__header")
+	public WebElement widgetGraphicHeader;
+	
+	@FindBy(linkText="Daily")
+	public WebElement widgetsDailyLink;
+	
+	@FindBy(xpath="//a[contains(text(),'More weather in your city')]")
+	public WebElement moreWeatherBtn;
+	
+	@FindBy(xpath="//*[@class='owm-agro__card']//a[contains(@href,'agromonitoring')]")
+	public WebElement agroWebLink;
+	
+	@FindBy(xpath="//a[contains(text(),'blog')]")
+	public WebElement agroBlogLink;
+	
+	@FindBy(xpath="//img[contains(@src,\"mainpage_banner_s2\")]")
+	public WebElement agroImage;
+	
+	@FindBy(xpath="//a[@class='btn btn-orange owm-agro__btn'][contains(text(),'How to start')]")
+	public WebElement agroHowToStart;
+	
+	@FindBy(xpath="//img[contains(@src,\"img-agro-banner\")]")
+	public WebElement agroImageAPI;
+	
+	@FindBy(xpath="//a[contains(text(),'Move to agromonitoring.com')]")
+	public WebElement moveToAgroBtn;
 	
 	@FindBy(xpath="//h3[contains(text(),'Weather in your city')]")
-	WebElement weatherinurctFooter;
+	public WebElement weatherinurctFooter;
 	
 	@FindBy(linkText="Find your city")
-	WebElement findurctLink;
+	public WebElement findurctLink;
 	
 	@FindBy(linkText="Weather maps")
-	WebElement wmapsLink;
+	public WebElement wmapsLink;
 	
 	@FindBy(xpath="//h3[@class='text-color'][contains(text(),'Weather APIs')]")
-	WebElement weatherapiFooter;
+	public WebElement weatherapiFooter;
 	
-	@FindBy(linkText="How to start")
-	WebElement howtostrtLink;
+	@FindBy(xpath="//a[@href='../appid']")
+	public WebElement howtostrtLink;
 	
 	@FindBy(linkText="Current weather")
-	WebElement cweatherLink;
+	public WebElement cweatherLink;
+	
+	@FindBy(linkText="Weather APIs for developers")
+	public WebElement weatherAPILink;
 	
 	@FindBy(linkText="5 day / 3 hour weather forecast")
-	WebElement wforecast53Link;
+	public WebElement wforecast53Link;
 	
 	@FindBy(linkText="16 day / daily weather forecast")
-	WebElement wforecast16Link;
+	public WebElement wforecast16Link;
 	
 	@FindBy(linkText="Hourly historical data")
-	WebElement historicalLink;
+	public WebElement historicalLink;
 	
 	@FindBy(linkText="History bulk")
-	WebElement historybulkLink;
+	public WebElement historybulkLink;
 	
 	@FindBy(linkText="Examples of API use")
-	WebElement apiuseLink;
+	public WebElement apiuseLink;
 	
 	@FindBy(xpath="//h3[contains(text(),'Map layers')]")
-	WebElement mapslayersFooter;
+	public WebElement mapslayersFooter;
 	
 	@FindBy(partialLinkText="Examples of weather map layers")
-	WebElement mpaslayerLink;
+	public WebElement mapslayerLink;
 	
 	@FindBy(partialLinkText="Map styles legend")
-	WebElement stylelengenLink;
+	public WebElement stylelengenLink;
 	
 	@FindBy(partialLinkText="Libraries to connect weather layers")
-	WebElement weatherlayerLink;
+	public WebElement weatherlayerLink;
 	
 	@FindBy(xpath="//h3[contains(text(),'How to subscribe')]")
-	WebElement subscribeFooter;
+	public WebElement subscribeFooter;
 	
 	@FindBy(linkText="Price-list")
-	WebElement pricelistLink;
+	public WebElement pricelistLink;
 	
 	@FindBy(linkText="Subscribe to APIs")
-	WebElement subtoapiLink;
+	public WebElement subtoapiLink;
 	
 	@FindBy(xpath="//div[@class='content']//div[@class='alert alert-info']")
-	WebElement alertFooter;
+	public WebElement alertFooter;
 	
 	@FindBy(xpath="//div[@class='content']//a[@class='alert-link'][contains(text(),'Support center')]")
-	WebElement supportcenterFooter;
+	public WebElement supportcenterFooter;
 	
 	@FindBy(xpath="//h3[contains(text(),'Weather station network')]")
-	WebElement stationFooter;
+	public WebElement stationFooter;
 	
 	@FindBy(linkText="How to connect your weather station")
-	WebElement stationLink;
+	public WebElement stationLink;
 	
 	@FindBy(xpath="//h3[contains(text(),'About')]")
-	WebElement aboutFooter;
+	public WebElement aboutFooter;
 	
 	@FindBy(linkText="About company")
-	WebElement aboutcmpLink;
+	public WebElement aboutcmpLink;
 	
 	@FindBy(linkText="Team")
-	WebElement teamLink;
+	public WebElement teamLink;
 	
 	@FindBy(linkText="Weather model")
-	WebElement modelLink;
+	public WebElement modelLink;
 	
 	@FindBy(linkText="Terms and conditions of sale")
-	WebElement tncsaleLink;
+	public WebElement tncsaleLink;
 	
 	@FindBy(linkText="Privacy policy")
-	WebElement policyLink;
+	public WebElement policyLink;
 	
 	@FindBy(linkText="Websites terms and conditions of use")
-	WebElement tncuseLink;
+	public WebElement tncuseLink;
 	
 	@FindBy(linkText="Our team")
-	WebElement ourteamLink;
+	public WebElement ourteamLink;
 	
 	@FindBy(xpath="//div[@class='col-sm-12']//p[2]")
-	WebElement copyrightsFooter;
+	public WebElement copyrightsFooter;
 	
 	@FindBy(className="stick-footer-panel__description")
-	WebElement copyrightsdescFooter;
+	public WebElement copyrightsdescFooter;
 	
 	@FindBy(partialLinkText="privacy policy")
-	WebElement copyrightsppLink;
-	
-	public String getTextValue(WebElement textElement) {
-		wait.until(ExpectedConditions.visibilityOf(textElement));
-		return textElement.getText();
-	}
-	
-	public boolean checkElementIsDisplayed (WebElement checkElement) {
-		wait.until(ExpectedConditions.visibilityOf(checkElement));
-		return checkElement.isDisplayed();
-	}
-	
-	public void validateMiniNavBar(String navbarfieldName) throws InterruptedException {
-		switch(navbarfieldName) {
-		case "Support Center":
-			wait.until(ExpectedConditions.visibilityOf(SupportCenterTitleLink));
-			if (SupportCenterTitleLink.isDisplayed()) {
-				SupportCenterTitleLink.click();
-				Thread.sleep(5000);
-			}
-			break;
-		case "Sign In":
-			wait.until(ExpectedConditions.visibilityOf(SignInLink));
-			if (SignInLink.isDisplayed()) {
-				SignInLink.click();	
-			}
-			break;
-		case "Sign Up":
-			wait.until(ExpectedConditions.visibilityOf(SingUpLink));
-			if (SingUpLink.isDisplayed()) {
-				SingUpLink.click();	
-			}
-			break;
-		}
-			
-	}
-	
-	public void validateMiniNavBar(String navbarfieldName, String searchName) throws InterruptedException {
-		switch(navbarfieldName) {
-		case "Weather in your city":
-			wait.until(ExpectedConditions.visibilityOf(SearchBarTitleLink));
-			if (SearchBarTitleLink.isDisplayed()) {
-				SearchBarTitleLink.click();
-				wait.until(ExpectedConditions.visibilityOf(WeatherSearchBarLink));
-				WeatherSearchBarLink.sendKeys(searchName);
-				WeatherSearchBarLink.sendKeys(Keys.ENTER);
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'"+searchName+"')]")));
-			}
-			break;
-		}
-	}
-	
-	public void checkElementDisplayedAndClick(WebElement element) {
-		wait.until(ExpectedConditions.visibilityOf(element));
-		if (element.isDisplayed()) {
-			element.click();
-		}
-	}
+	public WebElement copyrightsppLink;
 
 }

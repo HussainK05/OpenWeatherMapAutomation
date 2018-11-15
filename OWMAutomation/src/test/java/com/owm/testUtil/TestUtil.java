@@ -16,8 +16,12 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.own.baseTest.TestBase;
+import com.owm.baseTest.TestBase;
 
 public class TestUtil extends TestBase {
 
@@ -30,6 +34,7 @@ public class TestUtil extends TestBase {
 	static Workbook book;
 	static Sheet sheet;
 	static String data;
+	static WebDriverWait wait = new WebDriverWait(driver,30);
 
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

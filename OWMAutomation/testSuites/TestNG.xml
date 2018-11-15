@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "Suite1">
+
+   <test name = "E2ETest">
+      <classes>
+         <class name = "TestRunner.TestRunnerChrome"></class>
+      </classes>
+   </test>
+  
+     <test name = "E2EFirefox">
+      <classes>
+         <class name = "TestRunner.TestRunnerFirefox"></class>
+      </classes>
+   </test>
+
+  
+</suite> 
